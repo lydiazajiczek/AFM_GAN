@@ -1,7 +1,7 @@
 # AFM GAN
 Style transfer architecture for inferring pixelwise elastic modulus values of human tissue samples from grayscale microscope images. Based on the Pix2Pix architecture implementation in Keras by [Erik Linder-Norén](https://github.com/eriklindernoren/Keras-GAN/tree/master/pix2pix).
 
-# Functions
+## Functions
 * `train.py`: takes the following command line arguments:
 	* `--dataset_name` - the dataset to train on (default: `'liver'`)
 	* `--epochs` - integer number of training epochs (default 10000)
