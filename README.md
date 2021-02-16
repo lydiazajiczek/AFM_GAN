@@ -26,7 +26,7 @@ Tested on Windows 10 and Ubuntu 18.04.3 LTS.
 	* numpy
 	* opencv-python
 2. Clone the github repo
-3. Download the training dataset [here](https://weiss-develop.cs.ucl.ac.uk/afm-liver-tissue-data/training_data/) and extract into a folder called `data`
+3. Download the training dataset [here](https://weiss-develop.cs.ucl.ac.uk/afm-liver-tissue-data/training_data.zip) and extract into a folder called `data`
 4. Run
 	* `train.py --dataset_name liver --epochs 10000 --batch_size 16 --model_name liver`
 5. Once it has finished training, run
