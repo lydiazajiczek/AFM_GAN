@@ -207,7 +207,7 @@ class GAN:
 		start_time = datetime.datetime.now()
 
 		self.generator.load_weights('%s.h5' % self.model_name)
-		img = cv2.imread('%s.tiff' % fn, 0)
+		img = cv2.imread('%s.tiff' % fn, cv2.IMREAD_GRAYSCALE)
 
 		# scale and pad
 		img_pad = self.data_loader.scale_and_pad(img, nr, nc)

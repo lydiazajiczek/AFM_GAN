@@ -72,8 +72,8 @@ class DataLoader:
 		nx_scaled = math.ceil(self.scale * nx)
 		ny_scaled = math.ceil(self.scale * ny)
 		img_scaled = cv2.resize(img, (nx_scaled, ny_scaled))
-		nx_pad = (img_rows_in * nr) * math.ceil(nx_scaled / (img_rows_in * nr))
-		ny_pad = (img_cols_in * nc) * math.ceil(ny_scaled / (img_cols_in * nc))
+		nx_pad = (img_rows_in * nc) * math.ceil(nx_scaled / (img_rows_in * nc))
+		ny_pad = (img_cols_in * nr) * math.ceil(ny_scaled / (img_cols_in * nr))
 		img_pad = np.zeros((ny_pad, nx_pad), dtype=np.uint8)
 		img_pad[:img_scaled.shape[0], :img_scaled.shape[1]] = img_scaled
 
@@ -84,7 +84,7 @@ class DataLoader:
 		nx_scaled = math.ceil(self.scale * nx)
 		ny_scaled = math.ceil(self.scale * ny)
 		img_scaled = img_pred[:ny_scaled, :nx_scaled]
-		img = cv2.resize(img_scaled, (ny, nx), interpolation=cv2.INTER_LINEAR)
+		img = cv2.resize(img_scaled, (nx, ny), interpolation=cv2.INTER_LINEAR)
 
 		return img
 
