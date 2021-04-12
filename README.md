@@ -36,6 +36,7 @@ To fully test, follow all the below steps. To just test prediction using a pre-t
 Typical times to train on the liver dataset:
 * 3 hours on NVIDIA Tesla V100-DGXS 32GB (Ubuntu 18.04)
 * 5 hours on NVIDIA GeForce GTX 1050 Ti 4GB (Windows 10)
+
 Typical times to predict on`test.tiff` (3672 x 3282 11.4 MB image):
 * 14 minutes on NVIDIA Tesla V100-DGXS 32GB (Ubuntu 18.04)
 * 18 minutes on NVIDIA GeForce GTX 1050 Ti 4GB (Windows 10)
