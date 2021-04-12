@@ -19,8 +19,8 @@ Style transfer architecture for inferring pixelwise elastic modulus values of hu
 Tested on Windows 10 and Ubuntu 18.04.3 LTS.
 
 1. Install Python 3.5.2/3.68 with the following packages:
-	* tensorflow-gpu (tested on 1.11.0/1.12.0 with CUDA 9.0)
-	* keras (tested with 2.24)
+	* tensorflow-gpu (tested with version 1.11.0/1.12.0 using CUDA 9.0)
+	* keras (tested with version 2.24)
 	* h5py
 	* Pillow
 	* numpy
@@ -32,6 +32,9 @@ Tested on Windows 10 and Ubuntu 18.04.3 LTS.
 5. Once it has finished training, run
 	* `predict.py --fn test --nr 8 --nc 8 --model_name liver`
 
+Typical times to train on the liver dataset:
+* 3 hours on NVIDIA Tesla V100-DGXS 32GB (Ubuntu 18.04)
+* 5 hours on NVIDIA GeForce GTX 1050 Ti 4GB (Windows 10)
 Typical times to predict on`test.tiff` (3672 x 3282 11.4 MB image):
 * 14 minutes on NVIDIA Tesla V100-DGXS 32GB (Ubuntu 18.04)
 * 18 minutes on NVIDIA GeForce GTX 1050 Ti 4GB (Windows 10)
