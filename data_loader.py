@@ -12,8 +12,8 @@ class DataLoader:
 		self.output_type = output_type
 		self.img_res_in = img_res_in
 		self.img_res_out = img_res_out
-		self.paths_train = glob('./data/%s/%s/%s/*' % (dataset_name, input_type, "train"))
-		self.paths_test = glob('./data/%s/%s/%s/*' % (dataset_name, input_type, "val"))
+		self.paths_train = glob('./training_data/%s/%s/%s/*' % (dataset_name, input_type, "train"))
+		self.paths_test = glob('./training_data/%s/%s/%s/*' % (dataset_name, input_type, "val"))
 		self.n_batches = 1
 		self.scale = 5.2  # ratio between input pixel size and training set pixel size
 
@@ -50,7 +50,7 @@ class DataLoader:
 		
 		# load corresponding elastic modulus map
 		path, fn = os.path.split(fn)
-		path_out = os.path.join('./data/%s/%s/%s/%s' % (self.dataset_name, self.output_type, data_type, fn))
+		path_out = os.path.join('./training_data/%s/%s/%s/%s' % (self.dataset_name, self.output_type, data_type, fn))
 		img_out = np.expand_dims(np.array(Image.open(path_out)), axis=-1)
 		
 		# data augmentation
