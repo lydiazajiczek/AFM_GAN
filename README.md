@@ -18,6 +18,7 @@ Style transfer architecture for inferring pixelwise elastic modulus values of hu
 ## Installation and Testing
 Tested on Windows 10 and Ubuntu 18.04.3 LTS.
 
+To fully test, follow all the below steps. To just test prediction using a pre-trained model, skip steps 3 and 4.
 1. Install Python 3.5.2/3.68 with the following packages:
 	* tensorflow-gpu (tested with version 1.11.0/1.12.0 using CUDA 9.0)
 	* keras (tested with version 2.24)
@@ -29,7 +30,7 @@ Tested on Windows 10 and Ubuntu 18.04.3 LTS.
 3. Download the training dataset [here](https://weiss-develop.cs.ucl.ac.uk/afm-liver-tissue-data/training_data.zip) and extract into the cloned folder
 4. Run
 	* `train.py --dataset_name liver --epochs 10000 --batch_size 16 --model_name liver`
-5. Once it has finished training, run
+5. Once it has finished training (unless training was skipped), run
 	* `predict.py --fn test --nr 8 --nc 8 --model_name liver`
 
 Typical times to train on the liver dataset:
