@@ -69,7 +69,7 @@ class GAN:
 		# For the combined model we will only train the generator
 		self.discriminator.trainable = False
 		
-		# is input image fake or real?
+		# Is input image fake or real?
 		valid = self.discriminator([img_in, fake_out])
 		
 		self.combined = Model(inputs=[img_in, img_out], outputs=[valid, fake_out])
@@ -134,7 +134,7 @@ class GAN:
 
 		img_in = Input(shape=self.img_shape_in)
 
-		# downsample input image
+		# Downsample input image
 		img_in_ds = AveragePooling2D(pool_size=(2, 2), strides=None, padding='valid')(img_in)
 		
 		img_out = Input(shape=self.img_shape_out)
@@ -187,8 +187,11 @@ class GAN:
 
 			self.generator.save_weights("%s.h5" % self.model_name)
 
-			# randomly sample from validation set
-			self.sample_images(epoch, batch_i=0)
+			# randomly sample from validation set and generate image
+			# outputs two-panel image of generated and real image
+			# uncomment if tweaking network architecture to see if
+			# generator is converging to something useful
+			# self.sample_images(epoch, batch_i=0)
 			
 	def sample_images(self, epoch, batch_i):
 		os.makedirs('images/%s' % self.dataset_name, exist_ok=True)
