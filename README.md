@@ -13,7 +13,7 @@ Style transfer architecture for inferring pixelwise elastic modulus values of hu
 	* `--nr` and `--nc` - the integer number of subrows and subcolumns to split the image into to save memory (default 8)
 	* `--model_name` - (required) the saved .h5 weights file to use for prediction (**also without the file extension**)
 * `data_loader.py`: `DataLoader` class is used during training and testing for loading batches of images, preprocessing them and performing data augmentation as well as processing subimages during prediction.
-* `GAN.py`: instantiates the GAN class. Edit this to change the network architecture.
+* `GAN.py`: instantiates the `GAN` class. Edit this to change the network architecture.
 
 ## Installation and Testing
 Tested on Windows 10 and Ubuntu 18.04.3 LTS.
