@@ -34,7 +34,7 @@ To fully test, follow all the below steps. To just test prediction using a pre-t
 5. Once it has finished training (unless training was skipped), run
 	* `predict.py --fn test --nr 8 --nc 8 --model_name liver`
 
-The output will be a file named `test_pred.tiff`, however it is a 32-bit float image so will not display properly in most photo editors. `test_pred.png` is provided in the `testing` folder as a prediction TIFF that been loaded in ImageJ, converted to a pseudocolor image using a lookup table and adjusted so that only values between 0 and 2 kPa are displayed. The image mask used to remove pixels corresponding to bubbles, tissue glue, background or out of focus regions is provided in `test_mask.tiff` which is also provided as a human-readable PNG file. The final masked prediction test image is provided as `test_pred_masked.tiff` and `test_pred_masked.png`.
+The output will be a file named `test_pred.tiff`, however it is a 32-bit float image so will not display properly in most photo editors. `test_pred.png` is provided in the `testing` folder as a prediction TIFF that been loaded in ImageJ, converted to a pseudocolor image using a lookup table and adjusted so that only values between 0 and 2 kPa are displayed. The image mask used to remove pixels corresponding to bubbles, tissue glue, background or out of focus regions is provided in `test_mask.tiff` which is also provided as a human-readable PNG file. The final masked prediction test image is provided as `test_pred_masked.png`.
 
 Typical times to train on the liver dataset:
 * 3 hours on NVIDIA Tesla V100-DGXS 32GB (Ubuntu 18.04)
