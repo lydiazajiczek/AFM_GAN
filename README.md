@@ -18,10 +18,11 @@ Style transfer architecture for inferring pixelwise elastic modulus values of hu
 ## Installation and Testing
 Tested on Windows 10 and Ubuntu 18.04.3 LTS.
 
-To fully test, follow all the below steps. To just test prediction using a pre-trained model on a test image (both found in the `testing` folder), skip steps 3 and 4.
+To fully test, follow all the below steps. To test prediction only using a pre-trained model on a test image (both found in the `testing` folder), skip steps 3 and 4. Installation should take less than 20 minutes on a normal desktop computer with CUDA already installed (see [here](https://docs.nvidia.com/cuda/index.html)). Note that a normal tensorflow installation can also be used but training and prediction will take significantly longer
 
 1. Install Python 3.5.2/3.68 with the following packages:
 	* tensorflow-gpu (tested with version 1.11.0/1.12.0 using CUDA 9.0)
+	* tensorflow (only if your computer does not have a NVIDIA GPU - do not install tensorflow-gpu as well)
 	* keras (tested with version 2.24)
 	* h5py
 	* Pillow
