@@ -45,3 +45,7 @@ Typical times to predict on `test.tiff` (3672 x 3282 11.4 MB image):
 * 14 minutes on NVIDIA Tesla V100-DGXS 32GB (Ubuntu 18.04)
 * 18 minutes on NVIDIA GeForce GTX 1050 Ti 4GB (Windows 10)
 * 41 minutes on CPU (Intel i9-8950HK CPU, Windows 10)
+
+To cite this code, please use the following:
+
+[![DOI](https://zenodo.org/badge/337229575.svg)](https://zenodo.org/badge/latestdoi/337229575)
