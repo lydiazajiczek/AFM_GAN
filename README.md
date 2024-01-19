@@ -29,7 +29,7 @@ To fully test, follow all the below steps. To test prediction only using a pre-t
 	* numpy
 	* opencv-python
 2. Clone the github repo
-3. Download the training dataset [here](https://weiss-develop.cs.ucl.ac.uk/afm-liver-tissue-data/training_data.zip) and extract into the cloned folder
+3. Download the training dataset [here](https://rdr.ucl.ac.uk/articles/dataset/AFM_liver_tissue_data/25020907?file=44111263) and extract into the cloned folder
 4. Run
 	* `train.py --dataset_name liver --epochs 10000 --batch_size 16 --model_name liver`
 5. Once it has finished training (unless training was skipped), move `test.tiff` into the main directory and run
